@@ -1,0 +1,209 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Header ── */
+#app-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+  background: #1a1a1a;
+}
+
+#app-header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+}
+
+#app-header p {
+  margin: 2px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+/* ── Main row (sidebar + canvas) ── */
+#main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Left sidebar panel ── */
+#panel {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  flex-shrink: 0;
+  border-right: 1px solid #333;
+  background: #1a1a1a;
+  overflow-y: auto;
+}
+
+/* ── Controls ── */
+#controls {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #aaa;
+  padding-top: 6px;
+  border-top: 1px solid #333;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.control-group > label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.val {
+  color: #0010ff;
+  font-weight: 700;
+}
+
+.text-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#text-input {
+  flex: 1;
+  resize: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 6px 8px;
+  outline: none;
+  line-height: 1.4;
+}
+
+#text-input:focus {
+  border-color: #0010ff;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #0010ff;
+  cursor: pointer;
+}
+
+/* ── Presets ── */
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* ── Actions (bottom of sidebar) ── */
+#actions {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ── Canvas area ── */
+#canvas-container {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+  min-width: 0;
+}
+
+#canvas-container canvas {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* ── Buttons ── */
+button {
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 6px 12px;
+  background: #3a3a3a;
+  font-size: 12px;
+  color: #fff;
+  transition: background 0.12s, border-color 0.12s;
+  white-space: nowrap;
+  font-family: sans-serif;
+}
+
+button:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+button:active {
+  background: #e4e4e4;
+}
+
+#btn-randomize,
+#btn-export-png,
+#btn-export-svg {
+  width: 100%;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+#btn-randomize {
+  background: #0010ff;
+  color: #fff;
+  border-color: #0010ff;
+}
+
+#btn-randomize:hover {
+  background: #0009d4;
+  border-color: #0009d4;
+}
+
+#preset-example {
+  background: #3a3a3a;
+  color: #fff;
+  border-color: #555;
+}
+
